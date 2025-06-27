@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-h mt-10 flex items-center justify-center overflow-hidden "
+      className="relative mt-10 flex items-center justify-center overflow-hidden "
       style={{
         background: 'radial-gradient(ellipse at bottom, #0F172A 0%, #020617 100%)'
       }}
@@ -45,16 +45,13 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Content Container */}
       <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col lg:flex-row items-center">
-        {/* Left Column - Text Content */}
         <div className="lg:w-1/2 text-center lg:text-left mb-16 lg:mb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Subtitle with animated underline */}
             <div className="inline-block relative mb-4">
               <span className="text-purple-400 font-mono text-sm md:text-base">
                 Hi, I'm 
