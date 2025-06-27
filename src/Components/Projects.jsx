@@ -20,7 +20,7 @@ import { NavLink } from "react-router";
 const Projects = () => {
   const projects = [
     {
-      title: "Historical Artifacts Tracker",
+      title: "Artifacta",
       description:
         "Full-stack application for tracking and managing historical artifacts with user authentication and interactive features",
       features: [
@@ -37,13 +37,13 @@ const Projects = () => {
         "Tailwind CSS",
       ],
       image: artifact,
-      github: "https://github.com/yourusername/artifacts-tracker",
+      github: "https://github.com/TaFhiM12/artifacta-client",
       live: "https://artifacta-5240f.web.app/",
       type: "Full Stack",
       
     },
     {
-      title: "HobbyHub Community Platform",
+      title: "HobbyHub",
       description:
         "Local hobby group organizer with real-time group management and member interactions",
       features: [
@@ -59,12 +59,12 @@ const Projects = () => {
         "React Tooltip",
       ],
       image: hobbyhub,
-      github: "https://github.com/yourusername/hobbyhub",
+      github: "https://github.com/TaFhiM12/hobbyHub-client",
       live: "https://hobbyhub-4f8ab.web.app/",
       type: "Full Stack",
     },
     {
-      title: "JobTrack - Frontend Job Portal",
+      title: "JobTrack",
       description:
         "Interactive job search interface with responsive company listings and authentication UI",
       features: [
@@ -74,7 +74,7 @@ const Projects = () => {
       ],
       technologies: ["React", "Tailwind CSS", "React Router", "Framer Motion"],
       image: jobTrack,
-      github: "https://github.com/yourusername/jobtrack-frontend",
+      github: "https://github.com/TaFhiM12/jobTrack-react-app",
       live: "https://auth-integration-jobtrack.web.app/",
       type: "Frontend",
     },
@@ -138,7 +138,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-2  gap-8"
+          className="grid grid-cols-1 md:grid-cols-2  gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -152,7 +152,6 @@ const Projects = () => {
                 project.featured ? "lg:col-span-2" : ""
               }`}
             >
-              {/* Project Image */}
               <div className="relative  overflow-hidden group">
                 <img
                   src={project.image}
@@ -179,7 +178,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Project Content */}
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-white">
@@ -215,7 +213,6 @@ const Projects = () => {
 
                 <p className="text-gray-300 mb-4">{project.description}</p>
 
-                {/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-cyan-300 mb-2 flex items-center gap-2">
                     <Zap className="w-4 h-4" /> Key Features
@@ -233,7 +230,6 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                {/* Technologies */}
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-purple-300 mb-2">
                     Technologies
@@ -250,7 +246,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project-specific highlights */}
                 {project.title.includes("Artifacts") && (
                   <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
@@ -279,7 +274,6 @@ const Projects = () => {
                   </div>
                 )}
 
-                {/* Details Button */}
                 <motion.div className="mt-2" whileHover={{ x: 5 }}>
                   <NavLink
                     to={`/projects/${project.title
@@ -295,23 +289,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* CTA */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <a
-            href="/projects"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
-          >
-            <Code className="w-5 h-5 mr-2" />
-            View All Projects
-          </a>
-        </motion.div> */}
       </div>
     </section>
   );

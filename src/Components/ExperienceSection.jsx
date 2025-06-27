@@ -68,14 +68,12 @@ const ExperienceSection = () => {
       id="experience"
       className="relative py-20 mt-10 bg-gradient-to-b from-gray-900 to-gray-950"
     >
-      {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-500/20 blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6">
-        {/* Section Header - More focused on learning journey */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,12 +98,9 @@ const ExperienceSection = () => {
           </p>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-5 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-500"></div>
 
-          {/* Experience items */}
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
@@ -118,7 +113,6 @@ const ExperienceSection = () => {
                   index % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10"
                 }`}
               >
-                {/* Timeline dot */}
                 <div
                   className={`absolute top-0 ${
                     index % 2 === 0 ? "left-0" : "md:left-1/2 md:-ml-2.5 left-0"
@@ -129,7 +123,6 @@ const ExperienceSection = () => {
                   </div>
                 </div>
 
-                {/* Content card */}
                 <div
                   className={`bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:shadow-lg transition-all ${
                     index % 2 === 0 ? "md:mr-10" : "md:ml-10"

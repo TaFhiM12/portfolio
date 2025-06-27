@@ -49,9 +49,8 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:text-gray-900' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    // { icon: Mail, href: 'mailto:hello@example.com', label: 'Email', color: 'hover:text-green-600' }
+    { icon: Github, href: 'https://github.com/TaFhiM12', label: 'GitHub', color: 'hover:text-gray-900' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/tanvir-mahtab-tafhim-78161b285/', label: 'LinkedIn', color: 'hover:text-blue-600' },
   ];
 
   return (

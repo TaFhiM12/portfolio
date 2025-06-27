@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
 
 const MainLayout = () => {

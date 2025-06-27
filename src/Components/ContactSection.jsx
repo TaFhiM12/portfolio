@@ -298,8 +298,21 @@ const ContactSection = () => {
                   <div className="flex-1">
                     <h4 className="font-medium text-white mb-1">Email</h4>
                     <a
-                      href="mailto:tafhim000001@gmail.com"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=tafhim000001@gmail.com&su=Project%20Inquiry&body=Hello%20Tanvir,"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-cyan-300 hover:text-cyan-200 transition-colors"
+                      onClick={(e) => {
+                        if (!window.navigator.onLine) {
+                          e.preventDefault();
+                          navigator.clipboard
+                            .writeText("tafhim000001@gmail.com")
+                            .then(() => alert("Email copied to clipboard!"))
+                            .catch(() =>
+                              alert("My email: tafhim000001@gmail.com")
+                            );
+                        }
+                      }}
                     >
                       tafhim000001@gmail.com
                     </a>
