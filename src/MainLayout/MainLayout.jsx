@@ -1,3 +1,5 @@
+import { Outlet } from "react-router";
+import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
 
 const MainLayout = () => {
@@ -7,7 +9,7 @@ const MainLayout = () => {
                 <Navbar/>
             </header>
             <main className="w-11/12 mx-auto p-4">
-                
+                <Outlet/>
             </main>
         </div>
     );
