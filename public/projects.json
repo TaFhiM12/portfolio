@@ -1,0 +1,144 @@
+[
+  {
+    "id": "proj-001",
+    "title": "Artifacta",
+    "projectType": "Full Stack",
+    "liveUrl": "https://artifacta-5240f.web.app/",
+    "clientRepo": "https://github.com/TaFhiM12/artifacta-client",
+    "serverRepo": "https://github.com/yourusername/historical-artifacts-server",
+    "imageUrl": "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
+    "images": [
+      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
+      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
+      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
+      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png"
+    ],
+    "briefDescription": "A web application for tracking historical artifacts with user authentication, CRUD operations, and interactive features for artifact management.",
+    "features": [
+      "User authentication with JWT",
+      "Artifact CRUD operations",
+      "Like/dislike functionality",
+      "Search functionality",
+      "Responsive design",
+      "Private routes",
+      "Toast notifications",
+      "Dynamic page titles",
+      "404 page",
+      "Loading spinners"
+    ],
+    "technologies": [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Firebase Authentication",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Framer Motion",
+      "React Icons"
+    ],
+    "challenges": [
+      "Implementing JWT authentication",
+      "Toggle like functionality with real-time updates",
+      "Search functionality with backend filtering",
+      "Maintaining state on page reload for private routes"
+    ],
+    "dateCompleted": "2023-11-15",
+    "role": "Full Stack Developer"
+  },
+  {
+    "id": "proj-002",
+    "title": "HobbyHub",
+    "projectType": "Full Stack",
+    "liveUrl": "https://hobbyhub-4f8ab.web.app/",
+    "clientRepo": "https://github.com/TaFhiM12/hobbyHub-client",
+    "serverRepo": "https://github.com/TaFhiM12/hobbyHub-server",
+    "imageUrl": "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
+    "images": [
+      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
+      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
+      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
+      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png"
+    ],
+    "briefDescription": "A platform for discovering and joining local hobby-based groups with features for group creation, management, and user participation.",
+    "features": [
+      "User authentication with email/password and Google",
+      "Group CRUD operations",
+      "Join group functionality",
+      "Dark/light theme toggle",
+      "Responsive design",
+      "Private routes",
+      "Toast notifications",
+      "404 page",
+      "Loading animations",
+      "Date validation for group joining"
+    ],
+    "technologies": [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Firebase Authentication",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "React Awesome Reveal",
+      "React Tooltip",
+      "React Icons"
+    ],
+    "challenges": [
+      "Implementing dark/light theme",
+      "Date validation for group activities",
+      "Conditional rendering based on group status",
+      "User-specific data filtering"
+    ],
+    "dateCompleted": "2023-10-28",
+    "role": "Full Stack Developer"
+  },
+  {
+    "id": "proj-003",
+    "title": "JobTrack",
+    "projectType": "Front End",
+    "liveUrl": "https://auth-integration-jobtrack.web.app/",
+    "clientRepo": "https://github.com/TaFhiM12/jobTrack-react-app",
+    "serverRepo": null,
+    "imageUrl": "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
+    "images": [
+      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
+      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
+      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
+      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png"
+    ],
+    "briefDescription": "A job search platform that helps users explore opportunities across multiple companies with detailed job information and application features.",
+    "features": [
+      "User authentication",
+      "Company and job listings",
+      "Job details modal",
+      "Password recovery",
+      "Profile updating",
+      "Responsive design",
+      "Private routes",
+      "404 page",
+      "Dynamic page titles",
+      "Social login"
+    ],
+    "technologies": [
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Firebase Authentication",
+      "Framer Motion",
+      "React Icons",
+      "React Toastify",
+      "React Tooltip"
+    ],
+    "challenges": [
+      "Implementing password recovery",
+      "Creating interactive job modals",
+      "Profile update functionality",
+      "Data filtering and display"
+    ],
+    "dateCompleted": "2023-09-20",
+    "role": "Front End Developer"
+  }
+]

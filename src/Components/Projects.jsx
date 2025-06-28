@@ -20,6 +20,7 @@ import { NavLink } from "react-router";
 const Projects = () => {
   const projects = [
     {
+      id: "proj-001",
       title: "Artifacta",
       description:
         "Full-stack application for tracking and managing historical artifacts with user authentication and interactive features",
@@ -43,6 +44,7 @@ const Projects = () => {
       
     },
     {
+      id: "proj-002",
       title: "HobbyHub",
       description:
         "Local hobby group organizer with real-time group management and member interactions",
@@ -64,6 +66,7 @@ const Projects = () => {
       type: "Full Stack",
     },
     {
+      id: "proj-003",
       title: "JobTrack",
       description:
         "Interactive job search interface with responsive company listings and authentication UI",
@@ -105,14 +108,12 @@ const Projects = () => {
       id="projects"
       className="relative py-20 mt-10 overflow-hidden bg-gray-950"
     >
-      {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-500/20 blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -276,9 +277,7 @@ const Projects = () => {
 
                 <motion.div className="mt-2" whileHover={{ x: 5 }}>
                   <NavLink
-                    to={`/projects/${project.title
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                    to={`/projects/${project.id}`}
                     className="inline-flex items-center text-sm font-medium text-white group"
                   >
                     View project details

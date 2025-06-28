@@ -6,6 +6,8 @@ import SkillSection from "../Components/SkillSection";
 import Projects from "../Components/Projects";
 import ExperienceSection from "../Components/ExperienceSection";
 import ContactSection from "../Components/ContactSection";
+import ProjectDetail from './../Components/ProjectDetail';
+import axios from 'axios';
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/projects',
                 element: <Projects/>
+            },
+            {
+                path: 'projects/:id',
+                element: <ProjectDetail />,            
             },
             {
                 path: 'experience',
