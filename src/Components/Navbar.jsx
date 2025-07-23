@@ -74,7 +74,7 @@ const Navbar = () => {
                   </div>
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 </div>
-                <span className="text-white font-semibold text-lg">Portfolio</span>
+                <span className="text-white font-semibold text-2xl">Portfolio</span>
               </NavLink>
 
               <div className="flex items-center space-x-6 mx-2">
@@ -82,7 +82,7 @@ const Navbar = () => {
                   <NavLink
                     key={item.id}
                     to={item.href}
-                    className={({ isActive }) => `relative text-sm font-medium transition-all duration-300 group ${
+                    className={({ isActive }) => `relative text-lg font-medium  transition-all duration-300 group ${
                       isActive ? 'text-white' : 'text-gray-400 hover:text-white'
                     }`}
                     onClick={() => setActiveSection(item.id)}
@@ -103,10 +103,10 @@ const Navbar = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-2 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/10 rounded-lg`}
+                    className={`p-2  text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/10 rounded-lg`}
                     aria-label={social.label}
                   >
-                    <social.icon className="w-4 h-4" />
+                    <social.icon className="w-5 h-5" />
                   </a>
                 ))}
               </div>
