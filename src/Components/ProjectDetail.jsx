@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowLeft, 
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ArrowLeft,
   GitBranch,
   GitPullRequest,
   Server,
@@ -17,26 +17,26 @@ import {
   Shield,
   Terminal,
   ExternalLink,
-  ArrowRight
-} from 'lucide-react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import axios from 'axios';
+  ArrowRight,
+} from "lucide-react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import axios from "axios";
 
 const ProjectDetail = () => {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('features');
+  const [activeTab, setActiveTab] = useState("features");
   const { id } = useParams();
 
   useEffect(() => {
-    axios('/projects.json')
-      .then(response => {
+    axios("/projects.json")
+      .then((response) => {
         const projects = response.data;
-        const foundProject = projects.find(proj => proj.id === id);
+        const foundProject = projects.find((proj) => proj.id === id);
         setProject(foundProject || null);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error fetching project data:", error);
         setProject(null);
       })
@@ -47,21 +47,21 @@ const ProjectDetail = () => {
 
   if (loading) {
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="flex items-center justify-center min-h-screen bg-gray-950"
       >
         <motion.div
-          animate={{ 
+          animate={{
             rotate: 360,
-            scale: [1, 1.2, 1]
+            scale: [1, 1.2, 1],
           }}
-          transition={{ 
+          transition={{
             duration: 1.5,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           className="w-16 h-16 rounded-full border-4 border-cyan-500/30 border-t-cyan-500"
         />
@@ -78,9 +78,11 @@ const ProjectDetail = () => {
       >
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Project Not Found</h2>
-          <p className="text-gray-400 mb-6">The requested project could not be located in our archives.</p>
-          <Link 
-            to="/projects" 
+          <p className="text-gray-400 mb-6">
+            The requested project could not be located in our archives.
+          </p>
+          <Link
+            to="/projects"
             className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg hover:opacity-90 transition-opacity"
           >
             <ArrowLeft className="mr-2" /> Return to Gallery
@@ -91,14 +93,14 @@ const ProjectDetail = () => {
   }
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="min-h-screen mt-10 bg-gray-950 text-gray-100 pt-20 pb-20"
     >
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, 100, 0],
             y: [0, 50, 0],
@@ -107,11 +109,11 @@ const ProjectDetail = () => {
             duration: 30,
             repeat: Infinity,
             repeatType: "reverse",
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/10 blur-3xl"
         />
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, -80, 0],
             y: [0, -60, 0],
@@ -120,7 +122,7 @@ const ProjectDetail = () => {
             duration: 25,
             repeat: Infinity,
             repeatType: "reverse",
-            ease: "linear"
+            ease: "linear",
           }}
           className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-cyan-500/10 blur-3xl"
         />
@@ -128,18 +130,21 @@ const ProjectDetail = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Back button */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, type: "spring" }}
           className="mb-8"
         >
-          <Link 
-            to="/projects" 
+          <Link
+            to="/projects"
             className="inline-flex items-center group text-sm font-medium text-gray-400 hover:text-white transition-colors"
           >
-            <motion.span whileHover={{ x: -3 }} className="inline-flex items-center">
-              <ArrowLeft className="mr-2 w-4 h-4" /> 
+            <motion.span
+              whileHover={{ x: -3 }}
+              className="inline-flex items-center"
+            >
+              <ArrowLeft className="mr-2 w-4 h-4" />
               <span className="border-b border-transparent group-hover:border-gray-400 transition-all">
                 Back to Projects
               </span>
@@ -164,7 +169,7 @@ const ProjectDetail = () => {
               >
                 {project.projectType}
               </motion.span>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -173,7 +178,7 @@ const ProjectDetail = () => {
               >
                 {project.title}
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -183,43 +188,47 @@ const ProjectDetail = () => {
                 {project.briefDescription}
               </motion.p>
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-3"
             >
-              {project.clientRepo && (
-                <motion.a
-                  href={project.clientRepo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 rounded-lg border border-white/10 transition-all group"
-                >
-                  <Terminal className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                  <span>Client Code</span>
-                  <GitPullRequest className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.a>
+              {project.title !== "EarnSphereX" && (
+                <>
+                  {project.clientRepo && (
+                    <motion.a
+                      href={project.clientRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -3 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 rounded-lg border border-white/10 transition-all group"
+                    >
+                      <Terminal className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                      <span>Client Code</span>
+                      <GitPullRequest className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.a>
+                  )}
+
+                  {project.serverRepo && (
+                    <motion.a
+                      href={project.serverRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -3 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 rounded-lg border border-white/10 transition-all group"
+                    >
+                      <Server className="w-4 h-4 mr-2 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                      <span>Server Code</span>
+                      <GitBranch className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.a>
+                  )}
+                </>
               )}
-              
-              {project.serverRepo && (
-                <motion.a
-                  href={project.serverRepo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 rounded-lg border border-white/10 transition-all group"
-                >
-                  <Server className="w-4 h-4 mr-2 text-purple-400 group-hover:text-purple-300 transition-colors" />
-                  <span>Server Code</span>
-                  <GitBranch className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.a>
-              )}
-              
+
               {project.liveUrl && (
                 <motion.a
                   href={project.liveUrl}
@@ -281,7 +290,7 @@ const ProjectDetail = () => {
             )}
           >
             {project.images.map((image, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -301,22 +310,26 @@ const ProjectDetail = () => {
         </motion.div>
 
         {/* Tab navigation */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
           className="mb-8"
         >
           <div className="flex border-b border-white/10">
-            {['features', 'technology', 'challenges'].map((tab) => (
+            {["features", "technology", "challenges"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 text-sm font-medium relative ${activeTab === tab ? 'text-cyan-400' : 'text-gray-400 hover:text-white'}`}
+                className={`px-6 py-3 text-sm font-medium relative ${
+                  activeTab === tab
+                    ? "text-cyan-400"
+                    : "text-gray-400 hover:text-white"
+                }`}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 {activeTab === tab && (
-                  <motion.div 
+                  <motion.div
                     layoutId="tabIndicator"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -336,7 +349,7 @@ const ProjectDetail = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            {activeTab === 'features' && (
+            {activeTab === "features" && (
               <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-12">
                 <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                   <Zap className="w-5 h-5 text-cyan-400" />
@@ -363,7 +376,7 @@ const ProjectDetail = () => {
               </div>
             )}
 
-            {activeTab === 'technology' && (
+            {activeTab === "technology" && (
               <div className="mb-12 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                 <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                   <Code className="w-5 h-5 text-purple-400" />
@@ -388,7 +401,7 @@ const ProjectDetail = () => {
               </div>
             )}
 
-            {activeTab === 'challenges' && (
+            {activeTab === "challenges" && (
               <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-12">
                 <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                   <Layers className="w-5 h-5 text-amber-400" />
@@ -443,7 +456,9 @@ const ProjectDetail = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span className="text-white text-sm">View {index % 2 === 0 ? 'Dashboard' : 'Mobile'} View</span>
+                    <span className="text-white text-sm">
+                      View {index % 2 === 0 ? "Dashboard" : "Mobile"} View
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -458,8 +473,8 @@ const ProjectDetail = () => {
           transition={{ delay: 1.2 }}
           className="text-center"
         >
-          <Link 
-            to="/projects" 
+          <Link
+            to="/projects"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:opacity-90 rounded-lg text-white font-medium transition-all group"
           >
             <ArrowLeft className="mr-2 transition-transform group-hover:-translate-x-1" />
