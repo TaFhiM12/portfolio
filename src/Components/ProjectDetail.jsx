@@ -243,7 +243,7 @@ const ProjectDetail = () => {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, type: "spring" }}
-          className="mb-12 rounded-xl overflow-hidden border border-white/10 shadow-2xl"
+          className="mb-12 rounded-xl overflow-hidden border border-white/10 shadow-2xl "
         >
           <Carousel
             showArrows={true}
@@ -286,7 +286,7 @@ const ProjectDetail = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="h-96 md:h-[32rem] relative"
+                className=" relative"
               >
                 <img
                   src={image}

@@ -8,7 +8,7 @@ const MainLayout = () => {
             <header>
                 <Navbar/>
             </header>
-            <main className="mx-auto p-4">
+            <main className="mx-auto mt-20">
                 <Outlet/>
             </main>
         </div>

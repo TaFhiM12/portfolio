@@ -21,6 +21,34 @@ const Projects = () => {
   const projects = [
     {
       id: "proj-001",
+      title: "EarnSphereX",
+      description:
+        "MERN-based micro-task and earning platform with Buyer, Worker, and Admin roles, featuring task workflows, coin payments, and real-time dashboards.",
+      features: [
+        "Role-based dashboards with JWT auth (Worker, Buyer, Admin)",
+        "Coin-based task creation, approval, and earning system",
+        "Stripe integration for coin top-up and wallet management",
+        "Withdrawal system with 20-coin-per-dollar logic",
+        "Real-time notifications for actions like task approval or rejection",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Firebase Authentication",
+        "React Router",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Stripe",
+      ],
+      image: "https://i.ibb.co/Pdw86Yb/Screenshot-2025-07-23-234713.jpg",
+      github: "https://github.com/TaFhiM12/earnspherex-client",
+      live: "https://earnspherex.web.app/",
+      type: "Full Stack",
+    },
+    {
+      id: "proj-002",
       title: "Artifacta",
       description:
         "Full-stack application for tracking and managing historical artifacts with user authentication and interactive features",
@@ -41,10 +69,9 @@ const Projects = () => {
       github: "https://github.com/TaFhiM12/artifacta-client",
       live: "https://artifacta-5240f.web.app/",
       type: "Full Stack",
-      
     },
     {
-      id: "proj-002",
+      id: "proj-003",
       title: "HobbyHub",
       description:
         "Local hobby group organizer with real-time group management and member interactions",
@@ -66,7 +93,7 @@ const Projects = () => {
       type: "Full Stack",
     },
     {
-      id: "proj-003",
+      id: "proj-004",
       title: "JobTrack",
       description:
         "Interactive job search interface with responsive company listings and authentication UI",
@@ -139,7 +166,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2  gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -149,11 +176,11 @@ const Projects = () => {
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className={`bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 ${
+              className={`bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col ${
                 project.featured ? "lg:col-span-2" : ""
               }`}
             >
-              <div className="relative  overflow-hidden group">
+              <div className="relative overflow-hidden group">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -179,7 +206,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-white">
                     {project.title}
@@ -247,43 +274,17 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {project.title.includes("Artifacts") && (
-                  <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4" /> 150+ artifacts
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" /> JWT secured
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" /> MongoDB Atlas
-                    </span>
-                  </div>
-                )}
-
-                {project.title.includes("HobbyHub") && (
-                  <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4" /> 20+ groups
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" /> Date validation
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Code className="w-4 h-4" /> Theme toggle
-                    </span>
-                  </div>
-                )}
-
-                <motion.div className="mt-2" whileHover={{ x: 5 }}>
-                  <NavLink
-                    to={`/projects/${project.id}`}
-                    className="inline-flex items-center text-sm font-medium text-white group"
-                  >
-                    View project details
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </NavLink>
-                </motion.div>
+                <div className="mt-auto pt-4">
+                  <motion.div whileHover={{ x: 5 }}>
+                    <NavLink
+                      to={`/projects/${project.id}`}
+                      className="inline-flex items-end text-sm font-medium text-white group"
+                    >
+                      View project details
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </NavLink>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}

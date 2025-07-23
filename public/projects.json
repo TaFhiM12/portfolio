@@ -1,6 +1,62 @@
 [
   {
     "id": "proj-001",
+    "title": "EarnSphereX",
+    "projectType": "Full Stack",
+    "liveUrl": "https://earnspherex.web.app/",
+    "clientRepo": "https://github.com/TaFhiM12/earnspherex-client",
+    "serverRepo": "https://github.com/TaFhiM12/earnspherex-server",
+    "imageUrl": "https://i.ibb.co/Pdw86Yb/Screenshot-2025-07-23-234713.jpg",
+    "images": [
+      "https://i.ibb.co/Pdw86Yb/Screenshot-2025-07-23-234713.jpg",
+      "https://i.ibb.co/57y8pzf/2.jpg",
+      "https://i.ibb.co/Wv8NGV6k/3.jpg",
+      "https://i.ibb.co/fdkYR6Tx/4.jpg",
+      "https://i.ibb.co/23DFxGLx/5.jpg",
+      "https://i.ibb.co/pBYBxJNm/6.jpg",
+      "https://i.ibb.co/1tgkgVcT/7.jpg"
+    ],
+    "briefDescription": "A MERN-based micro-task and earning platform with role-based dashboards for Workers, Buyers, and Admins. Features include task creation, submissions, coin-based payments, Stripe integration, withdrawals, and real-time notifications.",
+    "features": [
+      "Role-based authentication (Worker, Buyer, Admin)",
+      "JWT secure private routes",
+      "Stripe integration for coin purchase",
+      "Task creation and approval workflow",
+      "Withdrawal system with 20-coin-per-dollar logic",
+      "Responsive dashboard for all roles",
+      "Notification system with pop-up panel",
+      "Google & email/password sign-in",
+      "Persistent login state on reload",
+      "Image uploads via imgBB"
+    ],
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "Firebase Authentication",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Stripe API",
+      "Framer Motion",
+      "React Hook Form",
+      "React Query",
+      "Swiper JS",
+      "DaisyUI"
+    ],
+    "challenges": [
+      "Implementing secure role-based route protection with token validation",
+      "Coin deduction and conditional logic for task creation",
+      "Handling Stripe payment webhooks and wallet top-ups",
+      "Managing state updates after submission approval/rejection",
+      "Building a pop-up notification system without external libraries"
+    ],
+    "dateCompleted": "2025-07-23",
+    "role": "Full Stack Developer"
+  },
+  {
+    "id": "proj-002",
     "title": "Artifacta",
     "projectType": "Full Stack",
     "liveUrl": "https://artifacta-5240f.web.app/",
@@ -9,9 +65,14 @@
     "imageUrl": "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
     "images": [
       "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
-      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
-      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png",
-      "https://i.ibb.co/SwwC9pzz/Screenshot-38.png"
+      "https://i.ibb.co/KzQSHMxF/2.jpg",
+      "https://i.ibb.co/bjv6nCvb/3.jpg",
+      "https://i.ibb.co/F4w2kfny/4.jpg",
+      "https://i.ibb.co/LX1Ds5h5/5.jpg",
+      "https://i.ibb.co/RTYH6xNW/6.jpg",
+      "https://i.ibb.co/4nVSVjQz/7.jpg",
+      "https://i.ibb.co/fY63QjJx/8.jpg",
+      "https://i.ibb.co/k2wzLfs8/9.jpg"
     ],
     "briefDescription": "A web application for tracking historical artifacts with user authentication, CRUD operations, and interactive features for artifact management.",
     "features": [
@@ -48,7 +109,7 @@
     "role": "Full Stack Developer"
   },
   {
-    "id": "proj-002",
+    "id": "proj-003",
     "title": "HobbyHub",
     "projectType": "Full Stack",
     "liveUrl": "https://hobbyhub-4f8ab.web.app/",
@@ -96,7 +157,7 @@
     "role": "Full Stack Developer"
   },
   {
-    "id": "proj-003",
+    "id": "proj-004",
     "title": "JobTrack",
     "projectType": "Front End",
     "liveUrl": "https://auth-integration-jobtrack.web.app/",
