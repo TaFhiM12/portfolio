@@ -4,8 +4,8 @@
     "title": "EarnSphereX",
     "projectType": "Full Stack",
     "liveUrl": "https://earnspherex.web.app/",
-    "clientRepo": "https://github.com/TaFhiM12/earnspherex-client",
-    "serverRepo": "https://github.com/TaFhiM12/earnspherex-server",
+    "clientRepo": "https://github.com/TaFhiM12/EarnSphereX-client",
+    "serverRepo": "https://github.com/TaFhiM12/EarnSphereX-server",
     "imageUrl": "https://i.ibb.co/Pdw86Yb/Screenshot-2025-07-23-234713.jpg",
     "images": [
       "https://i.ibb.co/Pdw86Yb/Screenshot-2025-07-23-234713.jpg",
@@ -115,12 +115,19 @@
     "liveUrl": "https://hobbyhub-4f8ab.web.app/",
     "clientRepo": "https://github.com/TaFhiM12/hobbyHub-client",
     "serverRepo": "https://github.com/TaFhiM12/hobbyHub-server",
-    "imageUrl": "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
+    "imageUrl": "https://i.ibb.co/mQ4ZQyW/1.jpg",
     "images": [
       "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
-      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
-      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png",
-      "https://i.ibb.co/LdCS8TyK/Screenshot-40.png"
+      "https://i.ibb.co/WNqGyFwV/2.jpg",
+      "https://i.ibb.co/svLrQBBy/3.jpg",
+      "https://i.ibb.co/TMQ5kjn8/4.jpg",
+      "https://i.ibb.co/m5bcHBtj/5.jpg",
+      "https://i.ibb.co/nsZSSB1R/6.jpg",
+      "https://i.ibb.co/hJfvfFx7/7.jpg",
+      "https://i.ibb.co/8gnF4Rr4/8.jpg",
+      "https://i.ibb.co/rRMXm62W/9.jpg",
+      "https://i.ibb.co/sv8Y1Zdp/10.jpg",
+      "https://i.ibb.co/xtpMBFNN/11.jpg"
     ],
     "briefDescription": "A platform for discovering and joining local hobby-based groups with features for group creation, management, and user participation.",
     "features": [
@@ -163,12 +170,14 @@
     "liveUrl": "https://auth-integration-jobtrack.web.app/",
     "clientRepo": "https://github.com/TaFhiM12/jobTrack-react-app",
     "serverRepo": null,
-    "imageUrl": "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
+    "imageUrl": "https://i.ibb.co/v6sbg25q/1.jpg",
     "images": [
-      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
-      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
-      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png",
-      "https://i.ibb.co/RpWCGVgq/Screenshot-41.png"
+      "https://i.ibb.co/v6sbg25q/1.jpg",
+      "https://i.ibb.co/qLth06hK/2.jpg",
+      "https://i.ibb.co/F4XvDN91/3.jpg",
+      "https://i.ibb.co/KjXftRJc/4.jpg",
+      "https://i.ibb.co/jk9VmBQD/5.jpg",
+      "https://i.ibb.co/5hn0Ljdx/6.jpg"
     ],
     "briefDescription": "A job search platform that helps users explore opportunities across multiple companies with detailed job information and application features.",
     "features": [

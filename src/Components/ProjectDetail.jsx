@@ -195,8 +195,7 @@ const ProjectDetail = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-3"
             >
-              {project.title !== "EarnSphereX" && (
-                <>
+              
                   {project.clientRepo && (
                     <motion.a
                       href={project.clientRepo}
@@ -226,9 +225,6 @@ const ProjectDetail = () => {
                       <GitBranch className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.a>
                   )}
-                </>
-              )}
-
               {project.liveUrl && (
                 <motion.a
                   href={project.liveUrl}
