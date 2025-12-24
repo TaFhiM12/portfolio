@@ -6,6 +6,10 @@ import {
   Cpu,
   BrainCircuit,
   Code2,
+  Database,
+  Server,
+  Layers,
+  GraduationCap,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -17,48 +21,52 @@ const ExperienceSection = () => {
       organization: "Jashore University of Science & Technology",
       period: "2021 - Present",
       description:
-        "Gaining strong theoretical foundation and practical skills in computer science",
+        "Building strong theoretical foundation in computer science while applying knowledge through practical projects",
       highlights: [
         "CGPA: 3.45/4.0 (Top 20% of class)",
-        "Relevant coursework: Data Structures, Algorithms, DBMS, Web Technologies",
-        "Final year project: Developing AI-integrated web application",
+        "Relevant coursework: Data Structures, Algorithms, Database Systems, Web Technologies",
+        "Actively applying academic concepts to real-world web development",
       ],
     },
     {
       icon: <Code className="text-cyan-400" />,
-      title: "Practical Training",
+      title: "Professional Web Development",
       organization: "Programming Hero Bootcamp",
-      period: "2024 (6 months)",
-      description: "Hands-on training in modern web development practices",
+      period: "2024 (Level 1 Complete)",
+      description: "Comprehensive training in modern web development stack and best practices",
       highlights: [
-        "Built 9 interactive frontend projects using React & Tailwind CSS",
-        "Developed 2 full-stack applications with MongoDB, Express, and Node.js",
-        "Mastered industry tools: Git, VS Code, Chrome DevTools, Postman",
-        "Implemented authentication, API integration, and responsive design",
+        "Built 9+ interactive frontend projects using React & Tailwind CSS",
+        "Developed 3+ full-stack applications with MERN Stack",
+        "Mastered Git, API integration, authentication, and deployment",
+        "Completed final project: AI-integrated full-stack application",
+      ],
+    },
+    {
+      icon: <GraduationCap className="text-orange-400" />,
+      title: "Next Level Web Development",
+      organization: "Programming Hero Level-2 Course",
+      period: "October 2025 - Present",
+      description: "Advanced training focusing on TypeScript, PostgreSQL, Next.js, and enterprise-grade development",
+      highlights: [
+        "Mission 1: TypeScript Mastery (Basic to Advanced Types, OOP)",
+        "Mission 2: Node.js, Express & SQL (PostgreSQL, Advanced CRUD)",
+        "Mission 3: RDBMS & Database Design (Normalization, Advanced Queries)",
+        "Mission 4: Prisma ORM & Next.js (Full-stack with TypeScript)",
+        "Mission 5-8: Industry Projects with AI Integration & Golang",
+        "Mission 9: Docker, NGINX, AWS, Testing & SWE Fundamentals",
       ],
     },
     {
       icon: <Trophy className="text-yellow-400" />,
-      title: "Competitive Programming",
-      organization: "Online Platforms",
+      title: "Competitive Programming & Problem Solving",
+      organization: "Multiple Platforms",
       period: "2021 - Present",
-      description: "Regular practice to enhance problem-solving abilities",
+      description: "Continuous practice to enhance algorithmic thinking and problem-solving abilities",
       highlights: [
-        "Codeforces: Pupil (Top 30% of participants)",
-        "CodeChef: 3-star coder (1600+ rating)",
-        "Solved 300+ algorithmic problems",
-      ],
-    },
-    {
-      icon: <BookOpen className="text-blue-400" />,
-      title: "Self-Directed Learning",
-      organization: "Personal Projects",
-      period: "2022 - Present",
-      description: "Building real-world applications to apply knowledge",
-      highlights: [
-        "Developed full-stack applications using MERN stack",
-        "Created responsive UIs with modern frameworks",
-        "Implemented authentication and database systems",
+        "Codeforces: Pupil (1200+ rating, 350+ problems solved)",
+        "CodeChef: 3-star coder (1600+ rating, 400+ problems solved)",
+        "LeetCode & GeeksforGeeks: 100+ problems",
+        "Strong foundation in Data Structures & Algorithms",
       ],
     },
   ];
@@ -82,24 +90,26 @@ const ExperienceSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-3 py-1 text-sm font-mono bg-white/5 text-cyan-300 rounded-full mb-4 border border-white/10">
-            MY DEVELOPMENT PATH
+            MY LEARNING JOURNEY
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Building My{" "}
+            From{" "}
             <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Foundation
+            </span>{" "}
+            to{" "}
+            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+              Next Level
             </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            While I'm just beginning my professional journey, my academic
-            projects and self-driven learning have given me substantial hands-on
-            experience
+            A structured learning path combining academic excellence, professional training, and continuous skill development
           </p>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-5 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-500"></div>
+          <div className="absolute left-5 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500 via-blue-500 to-orange-500"></div>
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
@@ -142,7 +152,11 @@ const ExperienceSection = () => {
                   <ul className="mt-4 space-y-2">
                     {exp.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="text-purple-400 mt-0.5">•</span>
+                        <span className={`${
+                          index === 0 ? "text-purple-400" :
+                          index === 1 ? "text-cyan-400" :
+                          index === 2 ? "text-orange-400" : "text-yellow-400"
+                        } mt-0.5`}>•</span>
                         <span className="text-gray-300">{highlight}</span>
                       </li>
                     ))}
@@ -158,50 +172,65 @@ const ExperienceSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-white/10 rounded-2xl p-8"
+          className="mt-20 bg-gradient-to-r from-purple-500/10 via-orange-500/10 to-cyan-500/10 border border-white/10 rounded-2xl p-8"
         >
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
-              <Cpu className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-orange-500 flex items-center justify-center">
+              <Layers className="w-6 h-6 text-white" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">
-                Building My Future Skills
+                Current Learning Stack
               </h3>
               <p className="text-gray-300">
-                Actively preparing for my professional journey through focused
-                learning
+                Building enterprise-ready skills through structured curriculum
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 mt-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
             <div className="bg-gray-900/50 p-4 rounded-lg border border-white/10 hover:border-purple-400/30 transition-all">
               <h4 className="font-medium text-purple-300 mb-2 flex items-center gap-2">
-                <Cpu className="w-4 h-4" /> MERN & Next.js
+                <Database className="w-4 h-4" /> TypeScript & Databases
               </h4>
               <p className="text-gray-300 text-sm">
-                Mastering backend architecture and modern frontend frameworks
+                TypeScript OOP, PostgreSQL, Prisma ORM, RDBMS Design
               </p>
             </div>
 
             <div className="bg-gray-900/50 p-4 rounded-lg border border-white/10 hover:border-cyan-400/30 transition-all">
               <h4 className="font-medium text-cyan-300 mb-2 flex items-center gap-2">
-                <BrainCircuit className="w-4 h-4" /> AI Integration
+                <Server className="w-4 h-4" /> Advanced Backend
               </h4>
               <p className="text-gray-300 text-sm">
-                Exploring practical AI applications for web development
+                Node.js optimization, Express.js, REST APIs, Authentication
               </p>
             </div>
 
-            <div className="bg-gray-900/50 p-4 rounded-lg border border-white/10 hover:border-blue-400/30 transition-all">
-              <h4 className="font-medium text-blue-300 mb-2 flex items-center gap-2">
-                <Code2 className="w-4 h-4" /> CS Fundamentals
+            <div className="bg-gray-900/50 p-4 rounded-lg border border-white/10 hover:border-orange-400/30 transition-all">
+              <h4 className="font-medium text-orange-300 mb-2 flex items-center gap-2">
+                <Cpu className="w-4 h-4" /> Full-Stack Frameworks
               </h4>
               <p className="text-gray-300 text-sm">
-                Strengthening core concepts for technical interviews
+                Next.js 14, SSR/SSG, API Routes, Authentication Systems
               </p>
             </div>
+
+            <div className="bg-gray-900/50 p-4 rounded-lg border border-white/10 hover:border-yellow-400/30 transition-all">
+              <h4 className="font-medium text-yellow-300 mb-2 flex items-center gap-2">
+                <BrainCircuit className="w-4 h-4" /> DevOps & Cloud
+              </h4>
+              <p className="text-gray-300 text-sm">
+                Docker, NGINX, AWS, CI/CD, Testing, Software Engineering
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-400">
+              Following the complete <span className="text-cyan-300">Programming Hero Level-2</span> curriculum with 
+              <span className="text-orange-300"> 9 Missions</span> and <span className="text-purple-300"> 66+ Modules</span>
+            </p>
           </div>
         </motion.div>
       </div>

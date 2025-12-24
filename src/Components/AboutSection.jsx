@@ -1,4 +1,4 @@
-import { Code, Paintbrush, BookOpen, Coffee, Terminal } from "lucide-react";
+import { Code, Paintbrush, BookOpen, Coffee, Terminal, Rocket, Database, Server } from "lucide-react";
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
@@ -28,8 +28,7 @@ const AboutSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Crafting digital experiences with both technical precision and
-            creative expression
+            Transforming problem-solving skills from competitive programming into building scalable, full-stack applications
           </p>
         </motion.div>
 
@@ -50,19 +49,20 @@ const AboutSection = () => {
                 </div>
                 <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                   <h3 className="text-xl font-medium text-white mb-2">
-                    The Beginning
+                    The Algorithmic Foundation
                   </h3>
                   <p className="text-gray-300">
-                    Started my journey at JUST with competitive programming,
-                    falling in love with problem-solving through platforms like
-                    Codeforces and CodeChef.
+                    Began my journey at JUST with competitive programming, mastering data structures and algorithms on Codeforces, CodeChef, and LeetCode - solving 300+ problems across platforms.
                   </p>
                   <div className="mt-3 flex gap-2">
                     <span className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
-                      C++
+                      C/C++
                     </span>
                     <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
                       Algorithms
+                    </span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
+                      Problem Solving
                     </span>
                   </div>
                 </div>
@@ -75,61 +75,14 @@ const AboutSection = () => {
                 </div>
                 <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                   <h3 className="text-xl font-medium text-white mb-2">
-                    Web Discovery
+                    Web Development Foundations
                   </h3>
                   <p className="text-gray-300">
-                    Transitioned to web development through university projects,
-                    realizing my passion for building interfaces that people
-                    actually interact with.
+                    Mastered MERN stack through Programming Hero bootcamp, building 9+ frontend projects and 3+ full-stack applications with MongoDB, Express, React, and Node.js.
                   </p>
                   <div className="mt-3 flex gap-2">
                     <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-300 border border-green-500/20">
-                      JavaScript
-                    </span>
-                    <span className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
-                      React
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Timeline item 3 */}
-              <div className="relative">
-                <div className="absolute -left-10 top-0 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-gray-950"
-                  >
-                    <path d="M3 3l18 18"></path>
-                    <path d="M21 3L3 21"></path>
-                    <path d="M18 6L6 18"></path>
-                    <path d="M14 10l-4 4"></path>
-                    <path d="M10 14l-4 4"></path>
-                  </svg>
-                </div>
-                <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-xl font-medium text-white mb-2">
-                    Current Focus
-                  </h3>
-                  <p className="text-gray-300">
-                    Deepening my expertise in MERN stack development while
-                    continuously sharpening my problem-solving skills through
-                    competitive programming challenges.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                      MongoDB
-                    </span>
-                    <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-300 border border-green-500/20">
-                      Express.js
+                      MERN Stack
                     </span>
                     <span className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
                       React
@@ -137,8 +90,37 @@ const AboutSection = () => {
                     <span className="px-2 py-1 text-xs rounded-full bg-gray-400/10 text-gray-300 border border-gray-400/20">
                       Node.js
                     </span>
-                    <span className="px-2 py-1 text-xs rounded-full bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
-                      Problem Solving
+                  </div>
+                </div>
+              </div>
+
+              {/* Timeline item 3 */}
+              <div className="relative">
+                <div className="absolute -left-10 top-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
+                  <Rocket className="w-3 h-3 text-gray-950" />
+                </div>
+                <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-medium text-white mb-2">
+                    Next Level Journey
+                  </h3>
+                  <p className="text-gray-300">
+                    Currently advancing through Programming Hero Level-2 course, focusing on TypeScript, PostgreSQL, Next.js, Prisma ORM, and backend optimization for enterprise-grade applications.
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                      TypeScript
+                    </span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-300 border border-green-500/20">
+                      PostgreSQL
+                    </span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                      Next.js
+                    </span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                      Prisma ORM
+                    </span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                      Advanced Backend
                     </span>
                   </div>
                 </div>
@@ -156,25 +138,24 @@ const AboutSection = () => {
             <div className="bg-gray-900/70 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-lg">
               <div className="flex flex-col items-center mb-6">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-white/10 mb-4 flex items-center justify-center">
-                  <Code className="w-10 h-10 text-cyan-300" />
+                  <Server className="w-10 h-10 text-cyan-300" />
                 </div>
-                <h3 className="text-xl font-medium text-white">About Me</h3>
+                <h3 className="text-xl font-medium text-white">Developer Journey</h3>
               </div>
 
               <div className="space-y-4 text-gray-300">
                 <p className="text-center italic">
-                  "I approach coding like storytelling - every project has its
-                  own narrative and character."
+                  "From competitive programming algorithms to building scalable web applications - always learning, always growing."
                 </p>
 
                 <div className="pt-4 border-t border-white/10">
                   <h4 className="font-medium text-white mb-3 text-center">
-                    When I'm not coding:
+                    Current Learning Focus:
                   </h4>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">
-                      <BookOpen className="w-5 h-5 text-purple-400" />
-                      <span>Reading sci-fi and tech blogs</span>
+                      <Database className="w-5 h-5 text-purple-400" />
+                      <span>PostgreSQL & Advanced RDBMS</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <svg
@@ -189,39 +170,37 @@ const AboutSection = () => {
                         strokeLinejoin="round"
                         className="text-cyan-400"
                       >
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
                       </svg>
-                      <span>Watching and playing cricket</span>
+                      <span>TypeScript & System Design</span>
                     </li>
                     <li className="flex items-center gap-3">
-                      <Coffee className="w-5 h-5 text-blue-400" />
-                      <span>Brewing specialty coffee</span>
+                      <Rocket className="w-5 h-5 text-blue-400" />
+                      <span>Next.js 16 & Full-Stack AI Apps</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="pt-4 border-t border-white/10">
                   <h4 className="font-medium text-white mb-3 text-center">
-                    What Drives Me:
+                    Development Philosophy:
                   </h4>
                   <div className="text-sm space-y-2">
                     <p className="flex items-start gap-2">
-                      <span className="text-purple-400">→</span>I get genuinely
-                      excited when learning new technologies and frameworks
+                      <span className="text-purple-400">→</span>
+                      <strong>Algorithm-first mindset:</strong> Apply problem-solving skills from competitive programming to real-world development
                     </p>
                     <p className="flex items-start gap-2">
                       <span className="text-cyan-400">→</span>
-                      There's nothing like the happiness of solving a tough
-                      coding problem
+                      <strong>Type-safe development:</strong> Building robust systems with TypeScript and modern tooling
                     </p>
                     <p className="flex items-start gap-2">
                       <span className="text-blue-400">→</span>
-                      Every new project is a chance to grow and improve my
-                      skills
+                      <strong>Database excellence:</strong> Mastering both NoSQL (MongoDB) and SQL (PostgreSQL) for optimal solutions
                     </p>
                     <p className="flex items-start gap-2">
-                      <span className="text-green-400">→</span>I love that
-                      moment when everything "clicks" and suddenly makes sense
+                      <span className="text-green-400">→</span>
+                      <strong>Full-stack mastery:</strong> From UI/UX to database optimization - understanding the complete stack
                     </p>
                   </div>
                 </div>

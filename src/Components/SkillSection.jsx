@@ -1,76 +1,94 @@
 import {
   Code,
-  Cpu,
   Database,
   GitMerge,
   Layout,
   Server,
-  Smartphone,
-  Trophy,
+  Zap,
   School,
   Rocket,
+  Lightbulb,
+  Layers,
+  Shield,
+  Cloud,
+  Box,
+  Cpu,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SkillSection = () => {
   const skills = [
     {
-      category: "Competitive Programming",
-      icon: Trophy,
-      items: ["C/C++", "Data Structures", "Algorithms", "Problem Solving"],
-      color: "from-purple-500 to-purple-700",
+      category: "Core Development Skills",
+      icon: Code,
+      items: ["JavaScript (ES6+)", "TypeScript", "Python", "Problem Solving", "Algorithmic Thinking"],
+      color: "from-blue-500 to-cyan-600",
       badges: [
         {
-          name: "Codeforces (Pupil)",
-          icon: "📊",
-          color: "bg-purple-500/10 text-purple-400",
+          name: "Strong Fundamentals",
+          icon: <Lightbulb size={14} />,
+          color: "bg-blue-500/10 text-blue-400 border border-blue-500/30",
         },
         {
-          name: "CodeChef (3⭐)",
-          icon: "👨‍💻",
-          color: "bg-blue-500/10 text-blue-400",
-        },
-        {
-          name: "LeetCode",
-          icon: "🏆",
-          color: "bg-yellow-500/10 text-yellow-400",
-        },
-        {
-          name: "GeeksforGeeks",
-          icon: "📚",
-          color: "bg-green-500/10 text-green-400",
+          name: "Clean Code",
+          icon: <Zap size={14} />,
+          color: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/30",
         },
       ],
     },
     {
       category: "Frontend Development",
       icon: Layout,
-      items: ["React", "JavaScript", "HTML/CSS", "Tailwind CSS"],
-      color: "from-cyan-500 to-cyan-700",
+      items: ["React.js", "HTML5/CSS3", "Tailwind CSS", "Responsive Design", "Component Architecture"],
+      color: "from-purple-500 to-pink-600",
       badges: [
         {
-          name: "EDGE-JUST-CSE",
-          icon: <School size={14} />,
-          color: "bg-cyan-500/10 text-cyan-400",
+          name: "9+ Projects Built",
+          icon: <Layers size={14} />,
+          color: "bg-purple-500/10 text-purple-400 border border-purple-500/30",
         },
         {
-          name: "Programming Hero",
-          icon: <Rocket size={14} />,
-          color: "bg-pink-500/10 text-pink-400",
+          name: "Modern UI/UX",
+          icon: <Box size={14} />,
+          color: "bg-pink-500/10 text-pink-400 border border-pink-500/30",
         },
       ],
     },
     {
-      category: "Backend Development",
+      category: "Backend & Database",
       icon: Server,
-      items: ["Node.js", "Express", "MongoDB", "REST APIs"],
-      color: "from-blue-500 to-blue-700",
+      items: ["Node.js", "Express.js", "RESTful APIs", "MongoDB", "PostgreSQL", "JWT Authentication"],
+      color: "from-green-500 to-emerald-600",
+      badges: [
+        {
+          name: "3+ Full-Stack Apps",
+          icon: <Cpu size={14} />,
+          color: "bg-green-500/10 text-green-400 border border-green-500/30",
+        },
+        {
+          name: "MERN Stack",
+          icon: <Database size={14} />,
+          color: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30",
+        },
+      ],
     },
     {
-      category: "Tools & Other",
-      icon: GitMerge,
-      items: ["Git/GitHub", "VS Code", "Figma", "Postman"],
-      color: "from-green-500 to-green-700",
+      category: "Tools & Deployment",
+      icon: Cloud,
+      items: ["Git/GitHub", "Firebase", "Vercel", "Netlify", "Postman", "VS Code", "Docker"],
+      color: "from-orange-500 to-amber-600",
+      badges: [
+        {
+          name: "CI/CD Ready",
+          icon: <Shield size={14} />,
+          color: "bg-orange-500/10 text-orange-400 border border-orange-500/30",
+        },
+        {
+          name: "Industry Tools",
+          icon: <GitMerge size={14} />,
+          color: "bg-amber-500/10 text-amber-400 border border-amber-500/30",
+        },
+      ],
     },
   ];
 
@@ -110,8 +128,8 @@ const SkillSection = () => {
     >
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
-        <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-500/20 blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-green-500/20 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6">
@@ -124,48 +142,51 @@ const SkillSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-3 py-1 text-sm font-mono bg-white/5 text-cyan-300 rounded-full mb-4 border border-white/10">
-            MY SKILLS
+            DEVELOPER SKILLSET
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            From{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Algorithms
+            Building{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Production-Ready
             </span>{" "}
-            to Applications
+            Applications
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            Transitioning my problem-solving skills from competitive programming
-            to building full-stack web applications
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+            Focused on practical web development with strong problem-solving skills, 
+            building scalable applications using modern technologies and best practices
           </p>
         </motion.div>
 
-        {/* Skills Grid - Visual Tags */}
+        {/* Skills Grid - Professional Development Focus */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.category}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:shadow-lg hover:shadow-purple-500/10 transition-all"
+              className="group relative bg-gradient-to-b from-gray-900 to-gray-800 border border-white/10 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-300"
             >
+              {/* Glow effect on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl from-blue-500 to-cyan-500 blur-xl"></div>
+              
               <div
-                className={`w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-br ${skill.color}`}
+                className={`relative w-12 h-12 rounded-xl mb-6 flex items-center justify-center bg-gradient-to-br ${skill.color} shadow-lg`}
               >
                 <skill.icon className="w-6 h-6 text-white" />
               </div>
 
-              <h3 className="font-bold text-white text-lg mb-4">
+              <h3 className="relative font-bold text-white text-xl mb-6 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
                 {skill.category}
               </h3>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="relative flex flex-wrap gap-2 mb-6">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1 text-sm rounded-full bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 transition-colors"
+                    className="px-3 py-1.5 text-sm rounded-lg bg-white/5 text-gray-300 border border-white/10 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-cyan-500/10 hover:border-blue-500/30 hover:text-white transition-all duration-200"
                   >
                     {item}
                   </span>
@@ -173,12 +194,12 @@ const SkillSection = () => {
               </div>
 
               {skill.badges && (
-                <div className="pt-4 border-t border-white/10 mt-4">
+                <div className="relative pt-6 border-t border-white/10 mt-6">
                   <div className="flex flex-wrap gap-2">
                     {skill.badges.map((badge) => (
                       <span
                         key={badge.name}
-                        className={`px-2 py-1 text-xs rounded-full flex items-center gap-1 ${badge.color} border border-white/10`}
+                        className={`px-3 py-1.5 text-xs rounded-full flex items-center gap-2 ${badge.color} backdrop-blur-sm`}
                       >
                         {badge.icon} {badge.name}
                       </span>
@@ -190,228 +211,266 @@ const SkillSection = () => {
           ))}
         </div>
 
-        {/* Coding Journey Timeline */}
+        {/* Development Journey Timeline - Fresher Focus */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden"
+          className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden mb-16"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
-              <Code className="w-6 h-6 text-white" />
+          <div className="relative flex items-center gap-6 mb-10">
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
+              <Rocket className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white">
-              My Development Journey
-            </h3>
+            <div>
+              <h3 className="text-2xl font-bold text-white">
+                My Development Journey
+              </h3>
+              <p className="text-gray-400 mt-1">From learning fundamentals to building real-world applications</p>
+            </div>
           </div>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-500"></div>
+            <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-cyan-500 to-green-500"></div>
 
             {/* Timeline items */}
-            <div className="space-y-8 pl-12">
-              {/* JUST Admission */}
-              <div className="relative">
-                <div className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center border-4 border-gray-950">
+            <div className="space-y-10 pl-12">
+              {/* Academic Foundation */}
+              <div className="relative group">
+                <div className="absolute -left-14 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center border-4 border-gray-950 shadow-lg group-hover:scale-110 transition-transform">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
-                <h4 className="font-medium text-white">
-                  Started Computer Science at JUST
-                </h4>
-                <p className="text-sm text-gray-400 mb-2">
-                  2021 - First exposure to C programming
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
-                    C Language
-                  </span>
-                </div>
-              </div>
-
-              {/* Competitive Programming */}
-              <div className="relative">
-                <div className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center border-4 border-gray-950">
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
-                </div>
-                <h4 className="font-medium text-white">
-                  Competitive Programming Phase
-                </h4>
-                <p className="text-sm text-gray-400 mb-2">
-                  2021-Present - Continued problem solving alongside <br /> web
-                  development
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                    C++
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                    DSA
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                    Problem Solving
-                  </span>
+                <div className="bg-gradient-to-r from-blue-500/5 to-transparent p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-xl text-white">Computer Science Fundamentals</h4>
+                    <span className="text-sm text-blue-300 bg-blue-500/10 px-3 py-1 rounded-full">JUST University</span>
+                  </div>
+                  <p className="text-gray-400 mb-3">Bachelor's in Computer Science & Engineering (CGPA: 3.46/4.00)</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-lg bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                      Programming Basics
+                    </span>
+                    <span className="px-3 py-1 text-sm rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                      Data Structures
+                    </span>
+                    <span className="px-3 py-1 text-sm rounded-lg bg-gray-500/10 text-gray-300 border border-gray-500/20">
+                      Algorithms
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Web Development Start */}
-              <div className="relative">
-                <div className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center border-4 border-gray-950">
+              <div className="relative group">
+                <div className="absolute -left-14 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center border-4 border-gray-950 shadow-lg group-hover:scale-110 transition-transform">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
-                <h4 className="font-medium text-white">
-                  Web Development Beginnings
-                </h4>
-                <p className="text-sm text-gray-400 mb-2">
-                  2024 - University projects & EDGE-JUST-CSE training
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                    HTML/CSS
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                    JavaScript
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-                    React
-                  </span>
+                <div className="bg-gradient-to-r from-purple-500/5 to-transparent p-6 rounded-xl border border-white/10 hover:border-purple-500/30 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-xl text-white">Web Development Foundations</h4>
+                    <span className="text-sm text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full">2024</span>
+                  </div>
+                  <p className="text-gray-400 mb-3">Started building interactive web applications with modern technologies</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="flex items-center gap-2 text-cyan-300">
+                        <span>🎨</span>
+                        <span className="font-medium">Frontend</span>
+                      </div>
+                      <div className="text-sm text-gray-400">HTML, CSS, JavaScript</div>
+                    </div>
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>⚙️</span>
+                        <span className="font-medium">Backend</span>
+                      </div>
+                      <div className="text-sm text-gray-400">Node.js, Express</div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Current Focus */}
-              <div className="relative">
-                <div className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center border-4 border-gray-950">
+              {/* MERN Stack Projects */}
+              <div className="relative group">
+                <div className="absolute -left-14 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center border-4 border-gray-950 shadow-lg group-hover:scale-110 transition-transform">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
-                <h4 className="font-medium text-white">
-                  Current Focus (4th Year)
-                </h4>
-                <p className="text-sm text-gray-400 mb-2">
-                  2025-present - MERN Stack & Professional Development
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
-                    MongoDB
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
-                    Express
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
-                    Node.js
-                  </span>
-                  <span className="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
-                    React
-                  </span>
+                <div className="bg-gradient-to-r from-green-500/5 to-transparent p-6 rounded-xl border border-white/10 hover:border-green-500/30 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-xl text-white">Full-Stack Development</h4>
+                    <span className="text-sm text-green-300 bg-green-500/10 px-3 py-1 rounded-full">2025</span>
+                  </div>
+                  <p className="text-gray-400 mb-3">Built production-ready MERN stack applications with real-world features</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 text-sm rounded-lg bg-green-500/10 text-green-300 border border-green-500/20">
+                      MongoDB + Express
+                    </span>
+                    <span className="px-3 py-1 text-sm rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                      React.js
+                    </span>
+                    <span className="px-3 py-1 text-sm rounded-lg bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
+                      JWT Authentication
+                    </span>
+                    <span className="px-3 py-1 text-sm rounded-lg bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                      RESTful APIs
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Current Focus - Advanced Development */}
+              <div className="relative group">
+                <div className="absolute -left-14 top-0 w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center border-4 border-gray-950 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                </div>
+                <div className="bg-gradient-to-r from-orange-500/5 to-transparent p-6 rounded-xl border border-white/10 hover:border-orange-500/30 transition-all">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-xl text-white">Advanced Development Skills</h4>
+                    <span className="text-sm text-orange-300 bg-orange-500/10 px-3 py-1 rounded-full">Current Focus</span>
+                  </div>
+                  <p className="text-gray-400 mb-3">Mastering modern development practices and scalable architecture</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="text-blue-300 font-medium mb-1">TypeScript</div>
+                      <div className="text-xs text-gray-400">Type-safe development</div>
+                    </div>
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="text-green-300 font-medium mb-1">PostgreSQL</div>
+                      <div className="text-xs text-gray-400">Relational databases</div>
+                    </div>
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="text-purple-300 font-medium mb-1">Next.js</div>
+                      <div className="text-xs text-gray-400">Full-stack framework</div>
+                    </div>
+                    <div className="bg-gray-800/50 p-3 rounded-lg border border-white/10">
+                      <div className="text-cyan-300 font-medium mb-1">Docker</div>
+                      <div className="text-xs text-gray-400">Containerization</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
+
+        {/* Project Highlights - Fresher Portfolio */}
         <motion.div
-          className="relative mt-16"
+          className="relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariants}
         >
-          <motion.div
-            className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center border-4 border-gray-950"
-            variants={itemVariants}
-          >
-            <div className="w-2 h-2 rounded-full bg-white"></div>
+          <motion.div className="text-center mb-12" variants={itemVariants}>
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Project Portfolio &{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Practical Experience
+              </span>
+            </h3>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Hands-on experience building complete applications with modern technologies and best practices
+            </p>
           </motion.div>
 
-          <motion.h4 className="font-medium text-3xl text-white" variants={itemVariants}>
-             Competitive{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Algorithms
-            </span>{" "}
-            & Projects
-          </motion.h4>
-
-          <motion.p
-            className="text-sm text-gray-400 mb-8 mt-2"
-            variants={itemVariants}
-          >
-            2021-Present - Solved{" "}
-            <span className="text-blue-300">300+ problems</span> across
-            platforms
-          </motion.p>
-
-          {/* Platform Stats */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 w-[70%] mx-auto"
-            variants={containerVariants}
-          >
+          {/* Project Metrics */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
-                icon: "📊",
-                platform: "Codeforces",
-                desc: "Pupil (1200+)",
-                solved: "350+",
-                color: "text-blue-400",
+                icon: "⚡",
+                title: "Frontend Projects",
+                value: "9+",
+                description: "Interactive UIs built",
+                color: "from-purple-500 to-pink-600",
               },
               {
-                icon: "👨‍💻",
-                platform: "CodeChef",
-                desc: "3⭐ (1600+)",
-                solved: "400+",
-                color: "text-purple-400",
+                icon: "🚀",
+                title: "Full-Stack Apps",
+                value: "3+",
+                description: "Production applications",
+                color: "from-blue-500 to-cyan-600",
               },
               {
-                icon: "🏆",
-                platform: "LeetCode",
-                desc: "Contest Rating",
-                solved: "70+",
-                color: "text-yellow-400",
+                icon: "🎯",
+                title: "Problem Solving",
+                value: "Strong",
+                description: "Algorithmic thinking",
+                color: "from-green-500 to-emerald-600",
               },
               {
-                icon: "📚",
-                platform: "GFG",
-                desc: "DSA Practice",
-                solved: "100+",
-                color: "text-green-400",
+                icon: "⚛️",
+                title: "Modern Stack",
+                value: "MERN +",
+                description: "Latest technologies",
+                color: "from-orange-500 to-amber-600",
               },
-            ].map((item, index) => (
+            ].map((stat, index) => (
               <motion.div
-                key={item.platform}
-                className="bg-gray-800/50 p-3 rounded-lg border border-white/10 flex flex-col justify-center items-center"
+                key={index}
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-gradient-to-b from-gray-900 to-gray-800 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all"
               >
-                <div className={`flex items-center gap-2 ${item.color}`}>
-                  <span>{item.icon}</span>
-                  <span className="font-mono text-sm">{item.platform}</span>
+                <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${stat.color} mb-4`}>
+                  <span className="text-2xl">{stat.icon}</span>
                 </div>
-                <div className="text-xs text-gray-400 mt-1">{item.desc}</div>
-                <div className="text-white text-sm mt-1">
-                  {item.solved} solved
-                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="font-medium text-gray-300 mb-1">{stat.title}</div>
+                <div className="text-sm text-gray-400">{stat.description}</div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Project Stats */}
-          <motion.div className="flex flex-col md:flex-row w-[70%] mx-auto gap-3" variants={statsVariants}>
-            <motion.div
-              className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 p-3 rounded-lg border border-white/10 flex-1"
-              whileHover={{ scale: 1.03 }}
-            >
-              <div className="text-cyan-300 text-sm mb-1">Frontend</div>
-              <div className="text-white font-medium">9+ Projects</div>
-              <div className="text-gray-400 text-xs mt-1">React, Tailwind</div>
-            </motion.div>
-
-            <motion.div
-              className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-3 rounded-lg border border-white/10 flex-1"
-              whileHover={{ scale: 1.03 }}
-            >
-              <div className="text-cyan-300 text-sm mb-1">Full Stack</div>
-              <div className="text-white font-medium">3+ Projects</div>
-              <div className="text-gray-400 text-xs mt-1">MERN Stack</div>
-            </motion.div>
+          {/* Featured Projects */}
+          <motion.div
+            className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10 border border-white/10 rounded-2xl p-8"
+            variants={statsVariants}
+          >
+            <h4 className="text-xl font-bold text-white mb-6 text-center">
+              Featured Full-Stack Projects
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { 
+                  name: "EarnSphereX", 
+                  type: "Micro Task Platform",
+                  tech: "MERN + Stripe",
+                  color: "text-purple-300",
+                  description: "Marketplace connecting buyers and workers with payment processing"
+                },
+                { 
+                  name: "Artifacta", 
+                  type: "Content Management",
+                  tech: "MERN + AI Chatbot",
+                  color: "text-cyan-300",
+                  description: "Historical artifacts tracker with real-time interaction system"
+                },
+                { 
+                  name: "HobbyHub", 
+                  type: "Community Platform",
+                  tech: "MERN + Firebase",
+                  color: "text-green-300",
+                  description: "Hobby group organizer with role-based access control"
+                },
+              ].map((project, index) => (
+                <div key={index} className="bg-gray-800/30 p-5 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all">
+                  <div className={`font-bold text-xl mb-2 ${project.color}`}>{project.name}</div>
+                  <div className="text-gray-400 text-sm mb-3">{project.type}</div>
+                  <div className="text-sm text-blue-300 mb-3">{project.tech}</div>
+                  <p className="text-gray-500 text-sm">{project.description}</p>
+                  <div className="mt-4 flex gap-2">
+                    <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">JWT Auth</span>
+                    <span className="px-2 py-1 text-xs rounded bg-green-500/10 text-green-300">REST API</span>
+                    <span className="px-2 py-1 text-xs rounded bg-purple-500/10 text-purple-300">Responsive</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 text-center text-gray-400 text-sm">
+              All projects implement authentication, database management, and modern UI/UX
+            </div>
           </motion.div>
         </motion.div>
       </div>

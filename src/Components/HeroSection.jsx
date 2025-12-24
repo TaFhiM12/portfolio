@@ -14,7 +14,7 @@ const HeroSection = () => {
     try {
       const link = document.createElement("a");
       link.href = "/resume.pdf";
-      link.download = "Tafhim_Resume.pdf";
+      link.download = "Tanvir_Mahtab_Tafhim_Resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -28,7 +28,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative mt-10 flex items-center justify-center overflow-hidden "
+      className="relative mt-10 flex items-center justify-center overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at bottom, #0F172A 0%, #020617 100%)",
@@ -87,20 +87,71 @@ const HeroSection = () => {
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500"></span>
             </div>
 
+            {/* Name */}
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Tanvir Mahtab Tafhim
+              </span>
+            </h2>
+
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Full Stack Developer
+                Full Stack MERN Developer
               </span>
             </h1>
 
-            {/* Description */}
+            {/* Description - Updated with your skills and focus */}
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-              I build exceptional digital experiences with modern technologies.
-              Specializing in <span className="text-purple-300">React</span>,{" "}
-              <span className="text-cyan-300">Node.js</span>, and{" "}
-              <span className="text-blue-300">Cloud Architecture</span>.
+              Building scalable web applications with{" "}
+              <span className="text-purple-300">TypeScript</span>,{" "}
+              <span className="text-cyan-300">React.js</span>,{" "}
+              <span className="text-green-300">Node.js</span>, and mastering{" "}
+              <span className="text-orange-300">PostgreSQL</span> &{" "}
+              <span className="text-blue-300">Next.js</span> for enterprise-grade solutions.
             </p>
+
+            {/* Competitive Programming Badges */}
+            <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="px-3 py-1 bg-gradient-to-r from-purple-500/10 to-purple-500/20 border border-purple-500/30 rounded-full flex items-center gap-2"
+              >
+                <span className="text-lg">📊</span>
+                <span className="text-sm text-purple-300 font-medium">
+                  Codeforces Pupil
+                </span>
+                <span className="text-xs text-gray-400">(1288)</span>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="px-3 py-1 bg-gradient-to-r from-blue-500/10 to-blue-500/20 border border-blue-500/30 rounded-full flex items-center gap-2"
+              >
+                <span className="text-lg">👨‍💻</span>
+                <span className="text-sm text-blue-300 font-medium">
+                  CodeChef 3⭐
+                </span>
+                <span className="text-xs text-gray-400">(1705)</span>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="px-3 py-1 bg-gradient-to-r from-orange-500/10 to-orange-500/20 border border-orange-500/30 rounded-full flex items-center gap-2"
+              >
+                <span className="text-lg">🎯</span>
+                <span className="text-sm text-orange-300 font-medium">
+                  Next Level Course
+                </span>
+                <span className="text-xs text-gray-400">(Oct'25)</span>
+              </motion.div>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -110,7 +161,7 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg font-medium flex items-center justify-center gap-2"
                 >
-                  View My Work <ArrowRight className="w-4 h-4" />
+                  View Projects <ArrowRight className="w-4 h-4" />
                 </motion.div>
               </Link>
 
@@ -121,7 +172,7 @@ const HeroSection = () => {
               >
                 <a
                   href="/resume.pdf"
-                  download="Tafhim_Resume.pdf"
+                  download="Tanvir_Mahtab_Tafhim_Resume.pdf"
                   onClick={handleDownload}
                 >
                   <motion.div
@@ -247,13 +298,20 @@ const HeroSection = () => {
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
               <pre className="text-green-400 font-mono text-sm">
-                {`const developer = {\n  name: "Tanvir Mahtab Tafhim",\n  role: "Full Stack Developer",\n  skills: ["React", "Node.js", "MongoDB"],\n  passion: "Building amazing web experiences"\n};`}
+                {`const developer = {
+  name: "Tanvir Mahtab Tafhim",
+  role: "Full Stack MERN Developer",
+  focus: "TypeScript, Next.js, PostgreSQL",
+  education: "B.Sc CSE at JUST",
+  projects: ["EarnSphereX", "Artifacta", "HobbyHub"],
+  competitive: "Codeforces Pupil | CodeChef 3⭐"
+};`}
               </pre>
             </div>
 
             <div className="relative h-80 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 flex items-center justify-center">
               <motion.div
-                className="relative w-60 h-60" 
+                className="relative w-60 h-60"
                 whileHover={{ scale: 1.03 }}
               >
                 <motion.div
@@ -261,8 +319,8 @@ const HeroSection = () => {
                   animate={{
                     boxShadow: [
                       "0 0 0 0 rgba(124, 58, 237, 0.4)",
-                      "0 0 0 15px rgba(124, 58, 237, 0)", 
-                      "0 0 0 30px rgba(124, 58, 237, 0)", 
+                      "0 0 0 15px rgba(124, 58, 237, 0)",
+                      "0 0 0 30px rgba(124, 58, 237, 0)",
                     ],
                   }}
                   transition={{
@@ -284,6 +342,7 @@ const HeroSection = () => {
                   </div>
                 </div>
 
+                {/* Project Badge 1 */}
                 <motion.div
                   className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-gray-800 border-2 border-purple-500/50 flex items-center justify-center shadow-lg z-10"
                   animate={{
@@ -296,15 +355,46 @@ const HeroSection = () => {
                     repeatType: "reverse",
                   }}
                 >
-                  <div className="text-2xl">👨‍💻</div>
+                  <div className="text-sm font-bold text-purple-300">MERN</div>
+                </motion.div>
+
+                {/* Project Badge 2 */}
+                <motion.div
+                  className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-gray-800 border-2 border-cyan-500/50 flex items-center justify-center shadow-lg z-10"
+                  animate={{
+                    y: [0, -3, 0],
+                    rotate: [0, -5, 5, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    delay: 0.5,
+                  }}
+                >
+                  <div className="text-xs font-bold text-cyan-300">TS</div>
                 </motion.div>
               </motion.div>
 
               <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gray-800 rounded-full border-2 border-purple-500/30 flex items-center justify-center shadow-lg">
-                <div className="text-3xl">⚛️</div>
+                <div className="text-2xl">⚛️</div>
               </div>
               <div className="absolute -top-8 -right-8 w-16 h-16 bg-gray-800 rounded-full border-2 border-cyan-500/30 flex items-center justify-center shadow-lg">
-                <div className="text-3xl">🚀</div>
+                <div className="text-2xl">🚀</div>
+              </div>
+
+              {/* Code badges around profile */}
+              <div className="absolute top-4 left-4 px-2 py-1 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/10">
+                <span className="text-xs text-green-400 font-mono">MongoDB</span>
+              </div>
+              <div className="absolute top-4 right-4 px-2 py-1 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/10">
+                <span className="text-xs text-blue-400 font-mono">Express</span>
+              </div>
+              <div className="absolute bottom-4 left-4 px-2 py-1 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/10">
+                <span className="text-xs text-cyan-400 font-mono">React</span>
+              </div>
+              <div className="absolute bottom-4 right-4 px-2 py-1 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/10">
+                <span className="text-xs text-green-400 font-mono">Node.js</span>
               </div>
 
               {[...Array(8)].map((_, i) => (
